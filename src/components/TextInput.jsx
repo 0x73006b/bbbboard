@@ -63,7 +63,7 @@ export class TextInput extends React.Component {
     };
 
     this.clearInputs();
-    axios.put('http://bbbboardapi.com/put', messageObject)
+    axios.put('http://bbbboardapi.herokuapp.com/put', messageObject)
       .then(this.clearInputs())
       .then(this.props.editMsg(messageObject))
       .catch(err => console.log(err));
@@ -93,7 +93,7 @@ export class TextInput extends React.Component {
     };
 
     this.clearInputs();
-    axios.post('http://bbbboardapi.com/post', messageObject)
+    axios.post('http://bbbboardapi.herokuapp.com/post', messageObject)
       .then(this.clearInputs())
       .then(this.props.postMsg(messageObject))
       .catch(err => console.log(err));

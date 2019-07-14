@@ -19,7 +19,7 @@ class MessageDisplay extends React.Component {
 
   delMsg (messageItem, index) {
     console.log(index);
-    axios.delete('http://bbbboardapi.com/delete', { params: { messageToDelete: messageItem } }).then(this.props.delMsg(index));
+    axios.delete('http://bbbboardapi.herokuapp.com/delete', { params: { messageToDelete: messageItem } }).then(this.props.delMsg(index));
   }
 
   setup () {

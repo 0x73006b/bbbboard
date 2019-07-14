@@ -7,7 +7,7 @@ import '../index.css';
 
 const fetchInitialMessageArray = async () => {
   try {
-    const retrievedMessages = await fetch('http://bbbboardapi.com/get');
+    const retrievedMessages = await fetch('http://bbbboardapi.herokuapp.com/get');
     // console.log(retrievedMessages);
     return (await retrievedMessages.json());
   } catch (e) {
