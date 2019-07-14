@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'chicoryregular';
+    src: url('media/chicory_-webfont.woff2') format('woff2'), url('media/chicory_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+body {
+    font-family: "Courier New", sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    max-width: 75vw;
+    animation-duration: 1s;
+    animation-name: fade;
+}
+
+.header {
+    color: white;
+    margin-top: -0.25em;
+    margin-bottom: -0.25em;
+}
+
+.header > h1:hover {
+    animation-duration: 0.75s;
+    animation-name: rotateText;
+    animation-fill-mode: forwards;
+}
+
+.header h1 {
+    font-size: calc(16px + 2vw);
+    display: flex;
+    justify-content: center;
+}
+
+.paragraphText {
+    margin-top: -2em;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Courier New", sans-serif;
+    font-weight: bold;
+    font-size: calc(16px + 2.5vw);
+    cursor: pointer;
+    position: inherit;
+}
+
+.navBar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navBar > a:hover {
+    color: bisque;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}

@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'chicoryregular';
+  src: url('media/chicory_-webfont.woff2') format('woff2'), url('media/chicory_-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(5, 5, 5), rgb(0, 0, 0));
+  color: white;
+  overflow-x: hidden;
+  animation-duration: 1.5s;
+  animation-name: fade;
+}
+
+div {
+  white-space: pre-wrap;
+}
+
+li {
+  list-style-type: none;
+  padding: 1em;
+}
+
+#backgroundVideoContainer {
+  max-width: 1vw;
+  min-height: 1vw;
+  z-index: -101;
+}
+
+#backgroundVideo {
+  position: absolute;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+.header {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  font-family: 'chicoryregular', sans-serif;
+  font-size: calc(16px + 2vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Courier New", sans-serif;
+  font-weight: bold;
+  font-size: calc(16px + 2.5vw);
+  cursor: pointer;
+  position: inherit;
+  padding-bottom: 0.25em;
+}
+
+.navBar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navBar > a:hover {
+  color: bisque;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.textInputArea {
+  font-family: 'Courier New', sans-serif;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  font-size: 1.15em;
+  font-family: 'Courier New', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  width: 50vw;
+}
+
+input {
+  font-size: 1.15em;
+  font-family: 'Courier New', sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  width: 50vw;
+}
+
+#usernameDataForm {
+  width: 70vw
+}
+
+#messageDataForm {
+  width: 70vw;
+}
+
+#messageIDDataForm {
+  width: 10vw;
+}
+
+.buttonSpan {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.buttonArea {
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.buttons {
+  font-family: 'Courier New', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 0.25em solid white;
+  box-shadow: none;
+  border-radius: 8px;
+  transition-duration: 0.2s;
+  margin: 1em;
+  padding: 1em;
+  z-index: 1;
+}
+
+.buttonsInfo {
+  font-family: 'Courier New', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  border: 0.15em solid white;
+  box-shadow: none;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+  padding: 0.15em;
+  margin: 0.15em;
+  z-index: 1;
+}
+
+
+.buttons:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+}
+
+.buttonAsText{
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+}
+
+.messageContainer {
+  display: flex;
+  align-items: flex-start;
+  background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(20, 20, 20));
+  padding: 1.25vmin;
+  margin-top: 1vmin;;
+  max-height: 50vmin;
+  overflow: auto;
+  font-family: 'Courier New', sans-serif;
+  color: white;
+  font-size: 1em;
+  word-break: break-word;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .messageContainer {
+    margin-left: 20vw;
+    margin-right: 20vw
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  #usernameDataForm {
+    width: 100vw;
+  }
+
+  #messageDataForm {
+    width: 100vw;
+  }
+}
