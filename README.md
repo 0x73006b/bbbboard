@@ -2,7 +2,7 @@
 
 ## CPSC 436 Individual Assignment
 
-This is the front end for my 436 MERN stack app. It uses React/Redux.
+This is the front end for my CPSC 436i MERN stack app. It uses React/Redux for the front end, Node/Exress/Mongo for the backend.
 
 View the deployed project at: http://bbbboard.herokuapp.com/
 
